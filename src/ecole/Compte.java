@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 import dao.DaoCompte;
 import dao.DaoGroupe;
 import dao.DaoTuteur;
@@ -20,6 +21,7 @@ public class Compte {
 	}
 	public int getIdCompte() {
 		return idCompte;
+		system.out.println("");
 	}
 	public void setIdCompte(int idCompte) {
 		this.idCompte = idCompte;
