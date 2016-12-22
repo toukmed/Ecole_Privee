@@ -1,7 +1,6 @@
 package ecole;
 
-public class MainTestThread {
-
+public class MainThread{
 
 	public static void main(String[] args) {
 
@@ -10,7 +9,6 @@ public class MainTestThread {
 
 		reservation1.start();
 		reservation2.start();
-
 
 	}
 

@@ -23,7 +23,8 @@ public class Local {
 		return listeReservations;
 	}
 	public void setListeReservations(List<Reservation> listeReservations) {
-		this.listeReservations = listeReservations;
+		Reservation reservation = new Reservation();
+		listeReservations.add(reservation);
 	}
 
 

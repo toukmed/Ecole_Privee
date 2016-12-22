@@ -1,15 +1,14 @@
 package ecole;
 
-import java.nio.channels.ClosedChannelException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Reservation extends Thread{
+import exceptionClasses.InvalidInputExeption;
 
+public class Reservation extends Thread{
 
 	private int id_reservation;
 	private Date dateDebut;
@@ -20,8 +19,8 @@ public class Reservation extends Thread{
 	public Reservation() {
 		SimpleDateFormat date = new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
 		try {
-			dateFin = date.parse("2016-12-22 19:55:50");
-			dateDebut = date.parse("2016-12-22 19:56:00");
+			dateFin = date.parse("2016-12-22 20:22:50");
+			dateDebut = date.parse("2016-12-22 20:23:00");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -72,6 +71,13 @@ public class Reservation extends Thread{
 			local.setId_local(1);
 			listeLocaux.add(local);
 			local.setEtat(true);
+			Client client = new Client();
+			try {
+				client.setNom("toto");
+			} catch (InvalidInputExeption e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			try {
 				System.out.println(local.isEtat());
 				Thread.sleep((dateFin.getTime()-dateDebut.getTime()));
