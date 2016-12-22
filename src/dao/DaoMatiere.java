@@ -44,7 +44,7 @@ public class DaoMatiere extends Dao implements Idao<Matiere> {
 			pstm = connection.prepareStatement(sql);
 			pstm.setString(1, T.getLibelleMatiere());
 			pstm.setInt(2, T.getCoef_matiere());
-			pstm.setInt(3, T.getModule().getId_module());
+			pstm.setInt(3, T.getModule().getId_Module());
 			pstm.executeUpdate();
 
 		} catch (SQLException e) {
@@ -75,8 +75,8 @@ public class DaoMatiere extends Dao implements Idao<Matiere> {
 		try {
 			pstm = connection.prepareStatement(sql);
 			pstm.setString(1, T.getLibelleMatiere());
-			pstm.setInt(2, T.getCoefMatiere());
-			pstm.setInt(3, T.getModule().getIdModule());
+			pstm.setInt(2, T.getCoef_matiere());
+			pstm.setInt(3, T.getModule().getId_Module());
 			pstm.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

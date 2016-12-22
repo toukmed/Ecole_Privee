@@ -54,9 +54,9 @@ public class DaoEvaluation extends Dao implements Idao<Evaluation>{
 		try {
 			Statement stmt = connection.createStatement();
 			resultats = stmt.executeQuery(sql);
+			Evaluation evaluation = new Evaluation();
 			while(resultats.next()){
-				//Evaluation niveau = new Evaluation(resultats.getDouble(1), resultats.getInt(2), resultats.getInt(3));
-				liste.add(niveau);
+
 			}
 
 		} catch (SQLException e) {
