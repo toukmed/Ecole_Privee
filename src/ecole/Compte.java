@@ -1,6 +1,7 @@
 package ecole;
 
 
+
 public class Compte {
 	private int idCompte;
 	private String matricule;
