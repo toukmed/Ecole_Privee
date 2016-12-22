@@ -8,3 +8,4 @@ public class Client extends Personne {
 	private List<Reservation> listeReservation;
 
 }
+
