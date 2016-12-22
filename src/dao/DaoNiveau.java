@@ -6,7 +6,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import ecole.Groupe;
 import ecole.Niveau;
 
 public class DaoNiveau extends Dao implements Idao<Niveau> {
@@ -22,7 +21,7 @@ public class DaoNiveau extends Dao implements Idao<Niveau> {
 			if(resultats.next()){
 				niveau = new Niveau(resultats.getString(2), resultats.getInt(1));
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -33,19 +32,19 @@ public class DaoNiveau extends Dao implements Idao<Niveau> {
 	@Override
 	public void create(Niveau T) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(Niveau T) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void update(Niveau T) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -60,7 +59,7 @@ public class DaoNiveau extends Dao implements Idao<Niveau> {
 				Niveau niveau = new Niveau(resultats.getString(2), resultats.getInt(1));
 				liste.add(niveau);
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

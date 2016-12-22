@@ -10,7 +10,6 @@ public class Groupe {
 	private String libelle;
 	private Niveau niv;
 	private List<Eleve> listeEleves = new ArrayList<Eleve>();
-	private List<Enseignant> ListeEnseignant = new ArrayList<Enseignant>();
 	public Groupe(int code,String libelle,Niveau niveau) {
 		this.niv = niveau;
 		this.code = code;
@@ -40,12 +39,7 @@ public class Groupe {
 	public void setNiv(Niveau niv) {
 		this.niv = niv;
 	}
-	public List<Enseignant> getListeEnseignant() {
-		return ListeEnseignant;
-	}
-	public void setListeEnseignant(List<Enseignant> listeEnseignant) {
-		ListeEnseignant = listeEnseignant;
-	}
+
 
 
 }
